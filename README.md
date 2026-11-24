@@ -55,10 +55,11 @@ Any Cursor user or engineering lead can export their raw usage CSV from the Curs
 python3 audit_csv.py path/to/your_cursor_usage.csv
 ```
 
-### What It Checks
-* **Single-Event Spikes:** Flags any individual logged request consuming `>= 500,000 tokens`.
-* **High-Velocity Burst Loops:** Groups requests by minute to detect automated loops (`>= 15 requests/min` or `>= 1,000,000 tokens/min`).
-* **Reconciliation Summary:** Calculates total logged tokens vs. billed cost across all Cursor CSV export formats.
+### Community Verification & Benchmarking (Help Build the Baseline)
+1. **Run the script locally:** Your CSV data never leaves your machine. At the end of the scan, the tool generates a single **anonymized summary line** with a SHA-256 verification signature (e.g., `Audit Result [CLEAN]: 0 single spikes (>=500k), 0 burst minutes | Events: 1,420 | Sig: #A1B2C3D4E5F6`).
+2. **Star this repository (`★ Star`):** Helps other developers and engineering leads discover this audit tool.
+3. **Post your anonymized result:** Open or reply in the **Issues** tab with your one-line anonymized summary (whether `CLEAN` or `ANOMALIES_DETECTED`) so the community can measure how widespread these spikes are.
+
 
 ---
 
