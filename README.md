@@ -1,4 +1,6 @@
 # Cursor Billing & Security Incident Audit: 91.7M Token Drain & Post-Cancellation Charges
+![Cursor Billing & Security Incident Audit](hero-evidence.png)
+
 
 Independent audit of the October 25, 2026 token drain on a commercial Cursor IDE account, paired with a zero-dependency Python CSV audit tool (`audit_csv.py`) to verify usage anomalies. This repository documents unthrottled consumption of **91.7M tokens in under a second**, post-cancellation billing attempts, and payment processor intervention, referencing Cursor's own incident disclosure stating the attacker used *"a stolen credential from the exposed data from our internal system."*
 
